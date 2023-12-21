@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System-Registration</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <style>
+        #address
+        {
+            width: 25%;
+        }
+        #imagePart
+        {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            width: 30%;
+            text-align: center;
+        }
+        #role
+        {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            width: 30%;
+            text-align: center; 
+        }
+        #role select
+        {
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="headerSection">
+        <h1>Online Voting System</h1>
+    </div>
+    <hr>
+    <form action="api/Registration.php" method="POST" enctype="multipart/form-data">
+        <h3>Registration</h3>
+        <input type="text" name="name" placeholder="Name">&nbsp;&nbsp;
+        <input type="number" name="mobile" placeholder="enter mobile"><br><br>
+        <input type="password" name="password" placeholder="enter password">&nbsp;&nbsp;
+        <input type="password" name="cpassword" placeholder="confirm password"><br><br>
+        <input type="text" id="address" name="address" placeholder="Address"><br><br>
+        <div id="imagePart">
+        Select Image:<input type="file" name="photo">
+        </div>
+        <br>
+        <div id="role">
+        Select Role:<select name="role">
+            <option value="1">Voter</option>
+            <option value="2">Group</option>
+        </select>
+        </div>
+        <br>
+        <button style="padding: 5px;
+        font-size: 15px;
+        border-radius:5px;
+        background-color:#5398db;
+        color: white;">Register</button><br>
+        <br>
+       Already User <a href="vindex.html">Login Here</a><br>
+    </form>
+    </center>
+</body>
+</html>
